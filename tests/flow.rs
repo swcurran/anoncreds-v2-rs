@@ -24,8 +24,13 @@ use regex::Regex;
 use sha2;
 use std::time::Instant;
 
+fn setup() {
+    let _ = env_logger::builder().is_test(true).try_init();
+}
+
 #[test]
 fn presentation_1_credential_works() {
+    setup();
     let res = test_presentation_1_credential_works();
     assert!(res.is_ok(), "{:?}", res);
 }
@@ -307,6 +312,7 @@ fn test_presentation_1_credential_alter_revealed_message_fails() -> CredxResult<
 
 #[test]
 fn blind_sign_request() {
+    setup();
     let res = test_blind_sign_request();
     assert!(res.is_ok(), "{:?}", res);
 }
