@@ -1,0 +1,99 @@
+{
+    "proofs": {
+      "27384b0dd2fa72e972406d81cfb4641b": {
+        "Range": {
+          "id": "27384b0dd2fa72e972406d81cfb4641b",
+          "proof": [
+            177,
+            19,
+            "... 1021 Entries", 
+            21
+          ]
+        }
+      },
+      "9062926ba9bf08d8bd795e2224689685": {
+        "Signature": {
+          "id": "9062926ba9bf08d8bd795e2224689685",
+          "disclosed_messages": {
+            "1": "35e4bd4303a80f1ce65daacadcc6d47e8041b60f3ea810aae2dcbaca23d11a8b"
+          },
+          "pok": {
+            "sigma_1": "b5732f880c91348efee2cfd32cee129ce5710e94268aa7012470e1a8a5e4263fa612fd466295f3e975f4058e9d48f314",
+            "sigma_2": "87ea186155415ecbc524d9b3b7c45c16f5559096942376bbbc65802f3c3c39d79dbd86a657ad41b109fb168a8bc19deb",
+            "commitment": "9322071f50b56f9456c1cd1466948d016fce29aacd71de23daa4876a24c3f06768f054ce3a67baa1d5ff035efc24e0fc1650a7988f6b5b59288452ecafc5c66c29ed5960250f1e10cd9592a5d696cffaeb2fbe6411cf32ffb15238c794c6e5d7",
+            "proof": [
+              "114b1acc5288cf892db7b284e4831fb644481107ca85763fbd4aa0c36d4a26a4",
+              "700ac2a19616be026d5284741df76367ebf2eb4d5a7edf96ed9f4a8faf6849bc",
+              "471f9359da493752bee3bfb0c4a95761ce9c2c70f8c6c39a1ca7d9d8cd41680f",
+              "55572010e777b129efdd0347cfbee862b47546b7a2f0402029415952ce55253c",
+              "4e240c70f7d91148dfc0e776017927e95cf685d4a7a588e9bf25316858b86a6f"
+            ]
+          }
+        }
+      },
+      "3ae98b17fa5317545d0328ffc2448690": {
+        "Revocation": {
+          "id": "3ae98b17fa5317545d0328ffc2448690",
+          "proof": {
+            "e_c": "a1be213a52cf7166da4257a17ce55b76c6e899d297c63f33f8dcb7e53872314456397f30c3f441841d85d2e39a084dc1",
+            "t_sigma": "852a158d8e0982dba402921e13ce3348cdeccbf14246da47ed8b74a435505e70037de919e2b0baf48a7fbdb7781105c9",
+            "t_rho": "86dda2ec3cadfb37f5d42aef656caf31d2710e483e19f835fc525ed3b35c23af63ca6025db2c07b618073ae76c0c8398",
+            "s_sigma": "10fb31a41b48c130a6aee7c63cedd68859cb058bc5123a5102263c95750b003b",
+            "s_rho": "03ad1230f2a6b1842d21499509287cb05d07d7e51b30ddfc1ca77633eb8b8500",
+            "s_delta_sigma": "250370b203ecc687646d0458eab63adcb3d3c231bf088b69357e4f8d5b78b6cf",
+            "s_delta_rho": "027a7e1c69c6989e5511358118f0bb0e51722e129694101553498069fce248fc",
+            "s_y": "471f9359da493752bee3bfb0c4a95761ce9c2c70f8c6c39a1ca7d9d8cd41680f"
+          }
+        }
+      },
+      "27748c391a173b95cfb882a49f28a142": {
+        "Commitment": {
+          "id": "27748c391a173b95cfb882a49f28a142",
+          "commitment": "98e36c6b6f3fbb39af9e42541fd31c8fd9d5c99221d80db4e37b3724a32a7e8f27e9c09d6e1e59f5171e63a0cc43ba6b",
+          "message_proof": "4e240c70f7d91148dfc0e776017927e95cf685d4a7a588e9bf25316858b86a6f",
+          "blinder_proof": "068f965b1006eb8e8ecda0bc406439f8650dc7231d446b3b398c4722a9d5e87c"
+        }
+      },
+      "73282560972d8a2ac00447522c466c86": {
+        "VerifiableEncryption": {
+          "id": "73282560972d8a2ac00447522c466c86",
+          "c1": "b95b6189d53179aaf356b1e7b61d7a210a1abb7209c83e78f103538bbace7f2806ec17c54c677c6bc21e0c724bfe0962",
+          "c2": "919171f1806f6dd95ff6e19a9e4d67ff3534b3afe8a640858d8e9359487855ca8a611e01c147811840158ab42142c68b",
+          "message_proof": "471f9359da493752bee3bfb0c4a95761ce9c2c70f8c6c39a1ca7d9d8cd41680f",
+          "blinder_proof": "65977109240fa9b4985937c1b3f0a8e29aa8dcfd8bd6076b74b053b6cc86de7f"
+        }
+      },
+      "fb705ef96722c79c5fe55ed541045e7f": {
+        "Membership": {
+          "id": "fb705ef96722c79c5fe55ed541045e7f",
+          "proof": {
+            "e_c": "8942f737fcc0c32de8167bc5f98226a15b28e04702aeba9ec1fe8630b74b1c31e1add229b91ff988fd8f91d922ec377c",
+            "t_sigma": "87bc9aed167e369d5551a500acd2b2c7384a3b9746e2381e2b3d4a6c57840c03f6134e27ee51cfd47463db2158a62013",
+            "t_rho": "98faf63ce1f5a77dc8225e5f0186d12c67f3789dd012fe4504bb6d94a83174a13634069f378edb4034ff7c0ecc75c888",
+            "s_sigma": "2f293333cb2754f718acf82f4ebb71255629ba5ceace16d13795761e3c364daa",
+            "s_rho": "20dc2e31e9c9b83f38418dd2459fe6f89d301518526154b6ae3c2d2d4f387e98",
+            "s_delta_sigma": "30e071226798989f784e16afb2cca95e0b3ce4b85be478df5dd6d988dc817983",
+            "s_delta_rho": "0c368da620c079888986584592a20d053b2f2699ef290ca7be5fcea6491a3dfd",
+            "s_y": "55572010e777b129efdd0347cfbee862b47546b7a2f0402029415952ce55253c"
+          }
+        }
+      }
+    },
+    "challenge": "5eea8c3488775aa4cf165ddcefa2cbff101275451b278ad85295c8ba659668fb",
+    "disclosed_messages": [
+      [
+        "9062926ba9bf08d8bd795e2224689685",
+        [
+          [
+            "name",
+            {
+              "Hashed": {
+                "value": "John Doe",
+                "print_friendly": true
+              }
+            }
+          ]
+        ]
+      ]
+    ]
+  }
