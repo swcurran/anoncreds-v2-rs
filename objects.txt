@@ -1,0 +1,669 @@
+    Finished test [unoptimized + debuginfo] target(s) in 0.04s
+     Running tests/flow.rs (target/debug/deps/flow-27ddb0ac8bafb91b)
+[2024-01-29T21:51:30Z DEBUG credx::credential::schema] Credential Schema: {
+      "id": "c749095beca601b400adf04356ca8bdc",
+      "label": "Test Schema",
+      "description": "This is a test presentation schema",
+      "blind_claims": [
+        "link_secret"
+      ],
+      "claim_indices": [
+        "identifier",
+        "link_secret",
+        "name",
+        "address",
+        "age"
+      ],
+      "claims": [
+        {
+          "claim_type": "Revocation",
+          "label": "identifier",
+          "print_friendly": false
+        },
+        {
+          "claim_type": "Scalar",
+          "label": "link_secret",
+          "print_friendly": false
+        },
+        {
+          "claim_type": "Hashed",
+          "label": "name",
+          "print_friendly": true,
+          "validators": [
+            {
+              "Length": {
+                "min": 3,
+                "max": 255
+              }
+            }
+          ]
+        },
+        {
+          "claim_type": "Hashed",
+          "label": "address",
+          "print_friendly": true,
+          "validators": [
+            {
+              "Length": {
+                "max": 255
+              }
+            }
+          ]
+        },
+        {
+          "claim_type": "Number",
+          "label": "age",
+          "print_friendly": true,
+          "validators": [
+            {
+              "Range": {
+                "min": 0,
+                "max": 65535
+              }
+            }
+          ]
+        }
+      ]
+    }
+[2024-01-29T21:51:30Z DEBUG credx::issuer] Credential Definition: {
+      "id": "e0c0d4bbe28cf4f73df2179510a4c94d",
+      "schema": {
+        "id": "c749095beca601b400adf04356ca8bdc",
+        "label": "Test Schema",
+        "description": "This is a test presentation schema",
+        "blind_claims": [
+          "link_secret"
+        ],
+        "claim_indices": [
+          "identifier",
+          "link_secret",
+          "name",
+          "address",
+          "age"
+        ],
+        "claims": [
+          {
+            "claim_type": "Revocation",
+            "label": "identifier",
+            "print_friendly": false
+          },
+          {
+            "claim_type": "Scalar",
+            "label": "link_secret",
+            "print_friendly": false
+          },
+          {
+            "claim_type": "Hashed",
+            "label": "name",
+            "print_friendly": true,
+            "validators": [
+              {
+                "Length": {
+                  "min": 3,
+                  "max": 255
+                }
+              }
+            ]
+          },
+          {
+            "claim_type": "Hashed",
+            "label": "address",
+            "print_friendly": true,
+            "validators": [
+              {
+                "Length": {
+                  "max": 255
+                }
+              }
+            ]
+          },
+          {
+            "claim_type": "Number",
+            "label": "age",
+            "print_friendly": true,
+            "validators": [
+              {
+                "Range": {
+                  "min": 0,
+                  "max": 65535
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "verifying_key": {
+        "w": "a158321808bd65447a5088518e4137b3f2f33726381511ea722b3d17c85c8176e24fb928e712731af7c4f3af3c17889e0cb9b2fa7b0358e51e60c3c55217ceff5b254236e0c3d966fc5eaa6d95e98e8e8fd9f3e8af032b4f8b58c15ecccc2587",
+        "x": "88d773c351b116877597615b243989eff6820802d2a935f62f600d3317da755898fb653036f93b3edc7d67f32907df940190a53713d69bf4effe62eb525a17b0afca339ffee4dff3012dc0fe16adeb5ac1cb85b6d89cea32c9c3c671a2da3b2e",
+        "y": [
+          "b4fca98830ef9a0a8c317629f44245d77baa5c7efaacec27aab4f1a28670dd0ce01bd3ab6d9ec16fa6428265cd56a12b0b17384f41a947536028cd02625fde409070b190ec6dc91a548f435db48025d369b45034f0c9ba3e618d334e78ec2fe4",
+          "b0100f3d7aa9c37bb447627914e652b0165602ae96129b906d350970132809b07a5857a68bdfc972343c7f7ea6aa4928093c5b8364fb365fbc486b8e01b8e094addb4c28ca221aaec05e80f15723d0cf52630a0ad7032e4ac8c26c9ad3b8720c",
+          "8443ac78d37150e8edd7cd54be76fb817d3d55040b2f56ba75d1bb977d808ff976f044759b42d0d871c3fd2c9ae4f89a0e87be80d2615f1eefc128bbb4a47f79598f19dfbb40cafdfdb582893016cb038d57bfec6e06b623b63e0c981c657138",
+          "91a3e22b14dc214ccf2beb99a5cdb448945e01f8194a481f441fb8a83ca7b280dbc1363bd9e65bdbf194d03fb0c5efb30de5efb6a473d6f9d478c395784fba2bd65f189ee3e53d5e7f26a93884026b87dc3de2e05826c0931945fa1d88b7b374",
+          "8d54c023c9153143499a54b347715259bf5d7220084c89ff6192490f99d41b152debecb04d0620f7571f9ee6b694eac60aa64264d5323ba0b3a12401b61ead60ef88e4189e08e24d85cc02c7610fcef3a8ea074c312fff234b0f89086b015e9e"
+        ],
+        "y_blinds": [
+          "a14f2d06c1626ab3c64d960ef313d28d5d7799efd4c22d981647d4d2cbc220953ba0fc8c9e4f002d36a92a1d45824eb7",
+          "85de1033a87a29bd88dd73c07a6c4f4178d10db776a359e84fcc788e549d375882f5cbd9fba99101ec81b1ede1a8d100",
+          "950471672a7362c9554ceb80f3f811420159cd14c01b641c6b52967503f1925647d5b0ded1752b31fa663390107edca8",
+          "953ac401786f226421ce0cbf2171c3b573c9529a8a9c4010dc38f5cdf929a6177edefe6400da99b8cb5c9df5303caec8",
+          "b84e4e79b5425722f6c076cba017cec02fcddbadd076a259fee51fc41dc1625d89ce6db39138a3eb84604e3e9745af20"
+        ]
+      },
+      "revocation_verifying_key": "999520f385b5953d5e8e718d7e7861ffe3e1a75835a096525af9daf3c2515ca2a6ac95011b918ec9c2a2d497be12df67023ef068a8d85cb3af3b8b5a28df99ff44fb5e3e04fb86f89d122a8b8ee95c03fc6c032c785b3650bd553578f775f676",
+      "verifiable_encryption_key": "aadbc50559df2ac48519e54f4b0d539dbdb9e5501408095c9a873188b9657a057d26d162565d9671b75b526acdd8dead",
+      "revocation_registry": "866b2a5308e4f4c4be8fc33415a3ebe1fb5d2419fbda312d99fe423487befd0dfc3f8093b755b68a14a426046a1e5508"
+    }
+[2024-01-29T21:51:30Z DEBUG credx::issuer] Blind Signed Credential: {
+      "issuer": {
+        "id": "e0c0d4bbe28cf4f73df2179510a4c94d",
+        "schema": {
+          "id": "c749095beca601b400adf04356ca8bdc",
+          "label": "Test Schema",
+          "description": "This is a test presentation schema",
+          "blind_claims": [
+            "link_secret"
+          ],
+          "claim_indices": [
+            "identifier",
+            "link_secret",
+            "name",
+            "address",
+            "age"
+          ],
+          "claims": [
+            {
+              "claim_type": "Revocation",
+              "label": "identifier",
+              "print_friendly": false
+            },
+            {
+              "claim_type": "Scalar",
+              "label": "link_secret",
+              "print_friendly": false
+            },
+            {
+              "claim_type": "Hashed",
+              "label": "name",
+              "print_friendly": true,
+              "validators": [
+                {
+                  "Length": {
+                    "min": 3,
+                    "max": 255
+                  }
+                }
+              ]
+            },
+            {
+              "claim_type": "Hashed",
+              "label": "address",
+              "print_friendly": true,
+              "validators": [
+                {
+                  "Length": {
+                    "max": 255
+                  }
+                }
+              ]
+            },
+            {
+              "claim_type": "Number",
+              "label": "age",
+              "print_friendly": true,
+              "validators": [
+                {
+                  "Range": {
+                    "min": 0,
+                    "max": 65535
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "verifying_key": {
+          "w": "a158321808bd65447a5088518e4137b3f2f33726381511ea722b3d17c85c8176e24fb928e712731af7c4f3af3c17889e0cb9b2fa7b0358e51e60c3c55217ceff5b254236e0c3d966fc5eaa6d95e98e8e8fd9f3e8af032b4f8b58c15ecccc2587",
+          "x": "88d773c351b116877597615b243989eff6820802d2a935f62f600d3317da755898fb653036f93b3edc7d67f32907df940190a53713d69bf4effe62eb525a17b0afca339ffee4dff3012dc0fe16adeb5ac1cb85b6d89cea32c9c3c671a2da3b2e",
+          "y": [
+            "b4fca98830ef9a0a8c317629f44245d77baa5c7efaacec27aab4f1a28670dd0ce01bd3ab6d9ec16fa6428265cd56a12b0b17384f41a947536028cd02625fde409070b190ec6dc91a548f435db48025d369b45034f0c9ba3e618d334e78ec2fe4",
+            "b0100f3d7aa9c37bb447627914e652b0165602ae96129b906d350970132809b07a5857a68bdfc972343c7f7ea6aa4928093c5b8364fb365fbc486b8e01b8e094addb4c28ca221aaec05e80f15723d0cf52630a0ad7032e4ac8c26c9ad3b8720c",
+            "8443ac78d37150e8edd7cd54be76fb817d3d55040b2f56ba75d1bb977d808ff976f044759b42d0d871c3fd2c9ae4f89a0e87be80d2615f1eefc128bbb4a47f79598f19dfbb40cafdfdb582893016cb038d57bfec6e06b623b63e0c981c657138",
+            "91a3e22b14dc214ccf2beb99a5cdb448945e01f8194a481f441fb8a83ca7b280dbc1363bd9e65bdbf194d03fb0c5efb30de5efb6a473d6f9d478c395784fba2bd65f189ee3e53d5e7f26a93884026b87dc3de2e05826c0931945fa1d88b7b374",
+            "8d54c023c9153143499a54b347715259bf5d7220084c89ff6192490f99d41b152debecb04d0620f7571f9ee6b694eac60aa64264d5323ba0b3a12401b61ead60ef88e4189e08e24d85cc02c7610fcef3a8ea074c312fff234b0f89086b015e9e"
+          ],
+          "y_blinds": [
+            "a14f2d06c1626ab3c64d960ef313d28d5d7799efd4c22d981647d4d2cbc220953ba0fc8c9e4f002d36a92a1d45824eb7",
+            "85de1033a87a29bd88dd73c07a6c4f4178d10db776a359e84fcc788e549d375882f5cbd9fba99101ec81b1ede1a8d100",
+            "950471672a7362c9554ceb80f3f811420159cd14c01b641c6b52967503f1925647d5b0ded1752b31fa663390107edca8",
+            "953ac401786f226421ce0cbf2171c3b573c9529a8a9c4010dc38f5cdf929a6177edefe6400da99b8cb5c9df5303caec8",
+            "b84e4e79b5425722f6c076cba017cec02fcddbadd076a259fee51fc41dc1625d89ce6db39138a3eb84604e3e9745af20"
+          ]
+        },
+        "revocation_verifying_key": "999520f385b5953d5e8e718d7e7861ffe3e1a75835a096525af9daf3c2515ca2a6ac95011b918ec9c2a2d497be12df67023ef068a8d85cb3af3b8b5a28df99ff44fb5e3e04fb86f89d122a8b8ee95c03fc6c032c785b3650bd553578f775f676",
+        "verifiable_encryption_key": "aadbc50559df2ac48519e54f4b0d539dbdb9e5501408095c9a873188b9657a057d26d162565d9671b75b526acdd8dead",
+        "revocation_registry": "866b2a5308e4f4c4be8fc33415a3ebe1fb5d2419fbda312d99fe423487befd0dfc3f8093b755b68a14a426046a1e5508"
+      },
+      "credential": {
+        "claims": {
+          "address": {
+            "Hashed": {
+              "value": "P Sherman 42 Wallaby Way Sydney",
+              "print_friendly": true
+            }
+          },
+          "age": {
+            "Number": {
+              "value": 30303
+            }
+          },
+          "identifier": {
+            "Revocation": {
+              "value": "91742856-6eda-45fb-a709-d22ebb5ec8a5"
+            }
+          },
+          "name": {
+            "Hashed": {
+              "value": "John Doe",
+              "print_friendly": true
+            }
+          }
+        },
+        "signature": {
+          "sigma_1": "ad2d14da4542b96c20e5b48cd72a0eea73e12056d4024609beef897f168ef2fd4802c1e29371db64b37640aafe3f1499",
+          "sigma_2": "b5b3c3865c6478093a4ef63f927451c4e1d9f0bd92251cc4dc99a16597b8e6c6bd17fc611d399870039bccdebab3e02a",
+          "m_tick": "641befaacad0c65b9a6d785344ab7bf5f333cadf6fb76e5c347e4ea049769d6d"
+        },
+        "revocation_handle": "833f325bef9bc20f262f7317680833ee8b49b2f091482a858ddbf375bd401a477b37c29f92d16431de8c2490419bfc59",
+        "revocation_label": "identifier"
+      }
+    }
+[2024-01-29T21:51:30Z DEBUG credx::credential::schema] Credential Schema: {
+      "id": "d21f425ef3b147e3540967d4ad08d67c",
+      "label": "Test Schema",
+      "description": "This is a test presentation schema",
+      "blind_claims": [],
+      "claim_indices": [
+        "identifier",
+        "name",
+        "address",
+        "age"
+      ],
+      "claims": [
+        {
+          "claim_type": "Revocation",
+          "label": "identifier",
+          "print_friendly": false
+        },
+        {
+          "claim_type": "Hashed",
+          "label": "name",
+          "print_friendly": true,
+          "validators": [
+            {
+              "Length": {
+                "min": 3,
+                "max": 255
+              }
+            }
+          ]
+        },
+        {
+          "claim_type": "Hashed",
+          "label": "address",
+          "print_friendly": true,
+          "validators": [
+            {
+              "Length": {
+                "max": 255
+              }
+            }
+          ]
+        },
+        {
+          "claim_type": "Number",
+          "label": "age",
+          "print_friendly": true,
+          "validators": [
+            {
+              "Range": {
+                "min": 0,
+                "max": 65535
+              }
+            }
+          ]
+        }
+      ]
+    }
+[2024-01-29T21:51:30Z DEBUG credx::issuer] Credential Definition: {
+      "id": "d689a4430aa59839532258139f948be3",
+      "schema": {
+        "id": "d21f425ef3b147e3540967d4ad08d67c",
+        "label": "Test Schema",
+        "description": "This is a test presentation schema",
+        "blind_claims": [],
+        "claim_indices": [
+          "identifier",
+          "name",
+          "address",
+          "age"
+        ],
+        "claims": [
+          {
+            "claim_type": "Revocation",
+            "label": "identifier",
+            "print_friendly": false
+          },
+          {
+            "claim_type": "Hashed",
+            "label": "name",
+            "print_friendly": true,
+            "validators": [
+              {
+                "Length": {
+                  "min": 3,
+                  "max": 255
+                }
+              }
+            ]
+          },
+          {
+            "claim_type": "Hashed",
+            "label": "address",
+            "print_friendly": true,
+            "validators": [
+              {
+                "Length": {
+                  "max": 255
+                }
+              }
+            ]
+          },
+          {
+            "claim_type": "Number",
+            "label": "age",
+            "print_friendly": true,
+            "validators": [
+              {
+                "Range": {
+                  "min": 0,
+                  "max": 65535
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "verifying_key": {
+        "w": "838e2256f2be56f18c267bda74216cafa3e8770c0dece153aa049623011c9cf02fa8fcfaeeae45dd01b4e5ea8b5920fa02a4902bf1cf6c17330a57b7049b3b72de714627ffa7e0515a914f494ade2d4c9bc7aa2de9a14bd861dba66a934f88b5",
+        "x": "97e5aa204776e2cac7c80a72de00282618827a7238190302c23e392a5b1fe7c2dd6f9cd8ee1a3171bd822aae08058720116dc3dd1eee55cf83ac0280badc39cebff48d5c0db60dc3fe8b090126259a680d14c7f0e729ea75dac70d7a908b3a51",
+        "y": [
+          "a7c8a8c0bf336d638b0dc39db216c7fbcd58036e52ec47507129b76c2be0537a454332f77cbc0b09afae788c6ae187e30d86d6e4880570094507f21be31d03d3fd7bc434d16210d26a70dffdd75f9a0ed8aa84286c122b60d44c3d8777410140",
+          "a2a4e5029f9c1c95ba8b0f89ffa341c74343df0a762703a1b036a8ab4607b1536f2b7b99df55af5ec961234dd8606dbd0d53f712941f11a22ff1fff89866e70364cb06bb312beb8cce598f0f573dc90b77db70f79246bd9a44cfaede87a9e419",
+          "82ea62a789d49a2ff1653a7f0bcc6f2bab8c31c31281a6a1b8cf238b672668d5896df65172b3fccd58399d581399c4e809fbd3247ff52eb312f240f8743a7d89349541c5f093b8e0d12169185b8d407f7a0f78bc13c5d9ba0ebeaf91d090af36",
+          "8aeff119b0bfca6d466448f33edcd355fc7271a1f45f4a957e74889a4c3bdd5f59223f855f94d7ebfd38b8e150388318088ccd078aaa782601eb9accd376872aa07ad0d3ce52065f3ac864257fc10fe95afd272ed9e3817070f2db43e2e81fba"
+        ],
+        "y_blinds": [
+          "893eaf53ee425d86279d9ba117a0aa1cc0a08c66b92941545702711874aec90327068eace1f68ed07c8de5b20c9fb4c7",
+          "829bcc600bb479e294caba50b6e556e73f413cc370ad50d9c53ad6cef0452039ee5533ed297f8d54422afbd5bda7c822",
+          "a00ad7411ebcaddd1c83b42b0185009f2e49b864b1fa489041dccd880d383d72d79855566064e2117e72573f48395243",
+          "ad563216520e3ee52b4cf1e7d00c4cc0dd3bd1d039c42365a161b012ce10dbfd68a67b52a0f1f709b42b4219d023735f"
+        ]
+      },
+      "revocation_verifying_key": "9578017a7ec4a737f7634a6f7c151c227a6719d1e9d4b5b90634f89722cf05a9bd2cc1f9a09a6c5e2d240528e0ae4b590a63d224bc4bac63a5d8bcdbe3e87692750662e7c9a4c0b05092f3c40b1655804fe04468fa1ca0ee6bef73f6bc30eddc",
+      "verifiable_encryption_key": "8665fdbabb49c16fa6826019fe4fb7525e7ead9b6e1ca9df8635b752f21b46b1e2510eb31d5d4fa0f7ab5401378f40de",
+      "revocation_registry": "8c6994539cb49bed9b0bb0d5e0f4a97acfabb910d75e468f0fee34a7b3ff66e8a3059a279813015ded8d2b31e5a8bc43"
+    }
+[2024-01-29T21:51:30Z DEBUG credx::issuer] Signed Credential: {
+      "issuer": {
+        "id": "d689a4430aa59839532258139f948be3",
+        "schema": {
+          "id": "d21f425ef3b147e3540967d4ad08d67c",
+          "label": "Test Schema",
+          "description": "This is a test presentation schema",
+          "blind_claims": [],
+          "claim_indices": [
+            "identifier",
+            "name",
+            "address",
+            "age"
+          ],
+          "claims": [
+            {
+              "claim_type": "Revocation",
+              "label": "identifier",
+              "print_friendly": false
+            },
+            {
+              "claim_type": "Hashed",
+              "label": "name",
+              "print_friendly": true,
+              "validators": [
+                {
+                  "Length": {
+                    "min": 3,
+                    "max": 255
+                  }
+                }
+              ]
+            },
+            {
+              "claim_type": "Hashed",
+              "label": "address",
+              "print_friendly": true,
+              "validators": [
+                {
+                  "Length": {
+                    "max": 255
+                  }
+                }
+              ]
+            },
+            {
+              "claim_type": "Number",
+              "label": "age",
+              "print_friendly": true,
+              "validators": [
+                {
+                  "Range": {
+                    "min": 0,
+                    "max": 65535
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "verifying_key": {
+          "w": "838e2256f2be56f18c267bda74216cafa3e8770c0dece153aa049623011c9cf02fa8fcfaeeae45dd01b4e5ea8b5920fa02a4902bf1cf6c17330a57b7049b3b72de714627ffa7e0515a914f494ade2d4c9bc7aa2de9a14bd861dba66a934f88b5",
+          "x": "97e5aa204776e2cac7c80a72de00282618827a7238190302c23e392a5b1fe7c2dd6f9cd8ee1a3171bd822aae08058720116dc3dd1eee55cf83ac0280badc39cebff48d5c0db60dc3fe8b090126259a680d14c7f0e729ea75dac70d7a908b3a51",
+          "y": [
+            "a7c8a8c0bf336d638b0dc39db216c7fbcd58036e52ec47507129b76c2be0537a454332f77cbc0b09afae788c6ae187e30d86d6e4880570094507f21be31d03d3fd7bc434d16210d26a70dffdd75f9a0ed8aa84286c122b60d44c3d8777410140",
+            "a2a4e5029f9c1c95ba8b0f89ffa341c74343df0a762703a1b036a8ab4607b1536f2b7b99df55af5ec961234dd8606dbd0d53f712941f11a22ff1fff89866e70364cb06bb312beb8cce598f0f573dc90b77db70f79246bd9a44cfaede87a9e419",
+            "82ea62a789d49a2ff1653a7f0bcc6f2bab8c31c31281a6a1b8cf238b672668d5896df65172b3fccd58399d581399c4e809fbd3247ff52eb312f240f8743a7d89349541c5f093b8e0d12169185b8d407f7a0f78bc13c5d9ba0ebeaf91d090af36",
+            "8aeff119b0bfca6d466448f33edcd355fc7271a1f45f4a957e74889a4c3bdd5f59223f855f94d7ebfd38b8e150388318088ccd078aaa782601eb9accd376872aa07ad0d3ce52065f3ac864257fc10fe95afd272ed9e3817070f2db43e2e81fba"
+          ],
+          "y_blinds": [
+            "893eaf53ee425d86279d9ba117a0aa1cc0a08c66b92941545702711874aec90327068eace1f68ed07c8de5b20c9fb4c7",
+            "829bcc600bb479e294caba50b6e556e73f413cc370ad50d9c53ad6cef0452039ee5533ed297f8d54422afbd5bda7c822",
+            "a00ad7411ebcaddd1c83b42b0185009f2e49b864b1fa489041dccd880d383d72d79855566064e2117e72573f48395243",
+            "ad563216520e3ee52b4cf1e7d00c4cc0dd3bd1d039c42365a161b012ce10dbfd68a67b52a0f1f709b42b4219d023735f"
+          ]
+        },
+        "revocation_verifying_key": "9578017a7ec4a737f7634a6f7c151c227a6719d1e9d4b5b90634f89722cf05a9bd2cc1f9a09a6c5e2d240528e0ae4b590a63d224bc4bac63a5d8bcdbe3e87692750662e7c9a4c0b05092f3c40b1655804fe04468fa1ca0ee6bef73f6bc30eddc",
+        "verifiable_encryption_key": "8665fdbabb49c16fa6826019fe4fb7525e7ead9b6e1ca9df8635b752f21b46b1e2510eb31d5d4fa0f7ab5401378f40de",
+        "revocation_registry": "8c6994539cb49bed9b0bb0d5e0f4a97acfabb910d75e468f0fee34a7b3ff66e8a3059a279813015ded8d2b31e5a8bc43"
+      },
+      "credential": {
+        "claims": [
+          {
+            "Revocation": {
+              "value": "91742856-6eda-45fb-a709-d22ebb5ec8a5"
+            }
+          },
+          {
+            "Hashed": {
+              "value": "John Doe",
+              "print_friendly": true
+            }
+          },
+          {
+            "Hashed": {
+              "value": "P Sherman 42 Wallaby Way Sydney",
+              "print_friendly": true
+            }
+          },
+          {
+            "Number": {
+              "value": 30303
+            }
+          }
+        ],
+        "signature": {
+          "sigma_1": "b52d724c8e7ab2bc11c4f363bdd12d25353e63a8047791aff1615bae9defff97382c48e80a8b0a8c8bb26956eadc86ed",
+          "sigma_2": "a7330ea79efceac1c61268b3a1219e086e436fa058180eedbbb785f39938478b96eef3761d85030a83b22b1e13676a88",
+          "m_tick": "1056e25782ed14dbc564a19f36e33979931c0fa44ee89d3495b5a5a892911969"
+        },
+        "revocation_handle": "af11ca666cb893fb66276b937be6601b5154296c38be0905851bdaf573e9893bdf4a3ebdae3663f794cfa2cb5385737c",
+        "revocation_index": 0
+      }
+    }
+[2024-01-29T21:51:30Z DEBUG credx::presentation::schema] Presentation Schema: {
+      "id": "5b64ea2304a12cee3efdda0d4c4648b1",
+      "statements": {
+        "58ce0b65ba2fb1d834ad64cdd5af3d3e": {
+          "Signature": {
+            "disclosed": [
+              "name"
+            ],
+            "id": "58ce0b65ba2fb1d834ad64cdd5af3d3e",
+            "issuer": {
+              "id": "d689a4430aa59839532258139f948be3",
+              "schema": {
+                "id": "d21f425ef3b147e3540967d4ad08d67c",
+                "label": "Test Schema",
+                "description": "This is a test presentation schema",
+                "blind_claims": [],
+                "claim_indices": [
+                  "identifier",
+                  "name",
+                  "address",
+                  "age"
+                ],
+                "claims": [
+                  {
+                    "claim_type": "Revocation",
+                    "label": "identifier",
+                    "print_friendly": false
+                  },
+                  {
+                    "claim_type": "Hashed",
+                    "label": "name",
+                    "print_friendly": true,
+                    "validators": [
+                      {
+                        "Length": {
+                          "min": 3,
+                          "max": 255
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "claim_type": "Hashed",
+                    "label": "address",
+                    "print_friendly": true,
+                    "validators": [
+                      {
+                        "Length": {
+                          "max": 255
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "claim_type": "Number",
+                    "label": "age",
+                    "print_friendly": true,
+                    "validators": [
+                      {
+                        "Range": {
+                          "min": 0,
+                          "max": 65535
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "verifying_key": {
+                "w": "838e2256f2be56f18c267bda74216cafa3e8770c0dece153aa049623011c9cf02fa8fcfaeeae45dd01b4e5ea8b5920fa02a4902bf1cf6c17330a57b7049b3b72de714627ffa7e0515a914f494ade2d4c9bc7aa2de9a14bd861dba66a934f88b5",
+                "x": "97e5aa204776e2cac7c80a72de00282618827a7238190302c23e392a5b1fe7c2dd6f9cd8ee1a3171bd822aae08058720116dc3dd1eee55cf83ac0280badc39cebff48d5c0db60dc3fe8b090126259a680d14c7f0e729ea75dac70d7a908b3a51",
+                "y": [
+                  "a7c8a8c0bf336d638b0dc39db216c7fbcd58036e52ec47507129b76c2be0537a454332f77cbc0b09afae788c6ae187e30d86d6e4880570094507f21be31d03d3fd7bc434d16210d26a70dffdd75f9a0ed8aa84286c122b60d44c3d8777410140",
+                  "a2a4e5029f9c1c95ba8b0f89ffa341c74343df0a762703a1b036a8ab4607b1536f2b7b99df55af5ec961234dd8606dbd0d53f712941f11a22ff1fff89866e70364cb06bb312beb8cce598f0f573dc90b77db70f79246bd9a44cfaede87a9e419",
+                  "82ea62a789d49a2ff1653a7f0bcc6f2bab8c31c31281a6a1b8cf238b672668d5896df65172b3fccd58399d581399c4e809fbd3247ff52eb312f240f8743a7d89349541c5f093b8e0d12169185b8d407f7a0f78bc13c5d9ba0ebeaf91d090af36",
+                  "8aeff119b0bfca6d466448f33edcd355fc7271a1f45f4a957e74889a4c3bdd5f59223f855f94d7ebfd38b8e150388318088ccd078aaa782601eb9accd376872aa07ad0d3ce52065f3ac864257fc10fe95afd272ed9e3817070f2db43e2e81fba"
+                ],
+                "y_blinds": [
+                  "893eaf53ee425d86279d9ba117a0aa1cc0a08c66b92941545702711874aec90327068eace1f68ed07c8de5b20c9fb4c7",
+                  "829bcc600bb479e294caba50b6e556e73f413cc370ad50d9c53ad6cef0452039ee5533ed297f8d54422afbd5bda7c822",
+                  "a00ad7411ebcaddd1c83b42b0185009f2e49b864b1fa489041dccd880d383d72d79855566064e2117e72573f48395243",
+                  "ad563216520e3ee52b4cf1e7d00c4cc0dd3bd1d039c42365a161b012ce10dbfd68a67b52a0f1f709b42b4219d023735f"
+                ]
+              },
+              "revocation_verifying_key": "9578017a7ec4a737f7634a6f7c151c227a6719d1e9d4b5b90634f89722cf05a9bd2cc1f9a09a6c5e2d240528e0ae4b590a63d224bc4bac63a5d8bcdbe3e87692750662e7c9a4c0b05092f3c40b1655804fe04468fa1ca0ee6bef73f6bc30eddc",
+              "verifiable_encryption_key": "8665fdbabb49c16fa6826019fe4fb7525e7ead9b6e1ca9df8635b752f21b46b1e2510eb31d5d4fa0f7ab5401378f40de",
+              "revocation_registry": "8c6994539cb49bed9b0bb0d5e0f4a97acfabb910d75e468f0fee34a7b3ff66e8a3059a279813015ded8d2b31e5a8bc43"
+            }
+          }
+        },
+        "83ed347e315378a559eec245378cd4fb": {
+          "Revocation": {
+            "id": "83ed347e315378a559eec245378cd4fb",
+            "reference_id": "58ce0b65ba2fb1d834ad64cdd5af3d3e",
+            "accumulator": "8c6994539cb49bed9b0bb0d5e0f4a97acfabb910d75e468f0fee34a7b3ff66e8a3059a279813015ded8d2b31e5a8bc43",
+            "verification_key": "9578017a7ec4a737f7634a6f7c151c227a6719d1e9d4b5b90634f89722cf05a9bd2cc1f9a09a6c5e2d240528e0ae4b590a63d224bc4bac63a5d8bcdbe3e87692750662e7c9a4c0b05092f3c40b1655804fe04468fa1ca0ee6bef73f6bc30eddc",
+            "claim": 0
+          }
+        },
+        "f8840bdb28fcaf8ce0c616e62d0653d4": {
+          "Commitment": {
+            "message_generator": "b8d9649d22ec777e2e44901c008586d1f101da619fe2036eda26a71f01b27ef9e74b36b51f2dd13406e93fe00de1fee9",
+            "blinder_generator": "96fbd3af691d823a8abff38ce7f24566187b890f5417da3f6a97c2a772172ce6ee72567cfcaf0daae12cdf77de47511c",
+            "id": "f8840bdb28fcaf8ce0c616e62d0653d4",
+            "reference_id": "58ce0b65ba2fb1d834ad64cdd5af3d3e",
+            "claim": 3
+          }
+        },
+        "8ddb8c99f2ece48665df213e60b5f5d4": {
+          "VerifiableEncryption": {
+            "message_generator": "97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb",
+            "encryption_key": "8665fdbabb49c16fa6826019fe4fb7525e7ead9b6e1ca9df8635b752f21b46b1e2510eb31d5d4fa0f7ab5401378f40de",
+            "id": "8ddb8c99f2ece48665df213e60b5f5d4",
+            "reference_id": "58ce0b65ba2fb1d834ad64cdd5af3d3e",
+            "claim": 0
+          }
+        },
+        "9a534a364d0e275671518b9430a39f6f": {
+          "Range": {
+            "id": "9a534a364d0e275671518b9430a39f6f",
+            "reference_id": "f8840bdb28fcaf8ce0c616e62d0653d4",
+            "signature_id": "58ce0b65ba2fb1d834ad64cdd5af3d3e",
+            "claim": 3,
+            "lower": 0,
+            "upper": 44829
+          }
+        },
+        "5d0b0d626bb34d4a069c164b4c6d1d6c": {
+          "Membership": {
+            "id": "5d0b0d626bb34d4a069c164b4c6d1d6c",
+            "reference_id": "58ce0b65ba2fb1d834ad64cdd5af3d3e",
+            "accumulator": "a476272b6088cca69804eb96dff373d677ba68541bba3d5ee6c4c8f83e368b14f7cee5939e463c8aa770b5bbc2251e45",
+            "verification_key": "986403488332e6340babb6706f36f6529843515d2c0e22e0ad01bd81db6af80cf2660b580deb7c0aa2d19733c9483f14110c41c5e0222469e966f72f5042158fdac2e3cec7b985c8e471a39c38c9c218b8dbbeb5088f872080a950f39d72426c",
+            "claim": 2
+          }
+        }
+      }
+    }
+[2024-01-29T21:51:31Z DEBUG credx::presentation::create] Presentation: {"proofs":{"9a534a364d0e275671518b9430a39f6f":{"Range":{"id":"9a534a364d0e275671518b9430a39f6f","proof":[147,68,40,210,105,21,12,211,1,132,3,204,31,227,191,214,221,35,151,103,132,111,91,113,19,139,77,58,6,145,40,253,11,16,117,232,99,79,175,62,108,131,117,232,234,147,33,135,144,131,46,122,215,169,229,91,213,239,63,205,88,57,183,246,186,141,12,81,144,191,190,250,146,208,200,147,80,108,96,251,253,82,3,120,91,188,37,14,121,234,172,113,202,8,133,137,172,149,216,168,110,111,91,158,38,233,16,167,43,223,115,121,149,90,198,99,11,9,129,109,218,203,203,21,138,185,32,57,238,58,85,152,78,231,173,153,43,31,230,250,95,182,67,219,151,225,195,118,155,214,114,18,127,195,78,109,11,137,136,165,203,126,150,60,67,9,238,118,211,186,53,171,85,118,81,186,202,198,4,30,152,231,94,65,87,134,86,122,246,76,56,47,94,104,85,67,22,247,216,77,143,157,225,123,16,64,53,151,40,27,157,155,127,246,46,141,43,240,145,139,224,33,194,165,15,241,121,185,202,63,239,79,184,76,120,63,11,20,35,105,126,16,33,120,191,202,182,117,183,12,237,49,223,55,139,115,27,170,73,25,181,48,192,91,46,49,88,209,71,97,248,42,39,202,181,32,10,189,190,240,192,7,124,72,56,137,172,229,105,156,17,160,251,183,189,195,19,213,87,211,174,108,253,10,150,194,151,242,154,44,226,62,189,27,174,40,212,52,3,14,65,247,163,205,18,243,93,185,26,22,60,46,204,55,84,92,161,67,180,84,39,13,173,14,92,84,231,18,130,51,39,3,182,116,65,64,188,212,187,22,130,118,204,88,224,117,204,174,167,97,152,110,75,162,199,222,196,187,183,178,141,116,217,74,42,49,122,48,242,59,182,13,49,232,192,188,115,254,47,76,185,128,108,251,36,241,117,175,114,48,161,174,51,91,80,118,169,96,251,180,10,212,54,10,201,180,79,91,130,52,198,116,123,227,102,74,198,165,254,109,141,244,117,8,74,16,196,196,145,249,210,47,106,34,254,205,107,253,182,24,176,6,44,208,73,133,183,112,254,164,176,184,11,202,58,47,43,168,56,251,10,73,110,253,241,5,102,179,106,248,201,13,123,229,243,61,131,204,18,84,233,209,41,245,101,183,116,77,175,135,29,23,15,144,11,191,58,143,37,242,223,207,88,26,169,227,111,45,57,204,188,253,209,253,64,61,146,16,232,109,72,206,32,214,169,79,181,232,6,76,125,205,200,72,43,124,112,175,124,198,126,189,254,127,196,191,234,172,190,188,107,34,143,196,97,190,80,233,117,139,65,151,121,153,172,177,140,227,196,91,162,33,176,55,95,134,75,179,135,50,162,236,117,131,150,15,102,21,131,210,161,86,40,95,96,225,145,194,188,58,43,136,94,64,44,187,43,157,104,112,118,18,182,183,32,64,156,185,208,189,138,99,84,209,110,196,99,209,241,57,226,236,2,186,11,225,56,136,57,20,40,85,254,235,145,145,144,31,241,116,185,121,133,5,136,254,203,171,116,173,30,194,184,37,203,181,169,158,185,30,57,225,127,211,226,78,178,144,52,223,2,9,210,168,239,236,174,235,238,19,54,9,20,167,59,136,54,124,248,238,32,15,27,253,166,128,35,176,134,23,249,243,112,64,212,6,129,107,248,146,132,154,59,156,97,24,180,206,217,10,81,236,106,38,159,102,121,195,131,116,160,138,111,64,49,75,199,91,154,82,56,20,255,137,200,176,180,108,223,200,61,68,95,249,173,232,138,98,68,4,230,100,125,142,82,192,239,72,181,109,51,126,127,120,60,195,59,13,202,139,114,39,62,243,9,19,154,249,218,14,235,207,27,154,114,117,132,151,129,242,211,0,143,147,232,189,204,220,178,205,151,28,144,11,7,220,94,58,248,207,121,154,4,130,99,93,44,145,43,66,132,152,205,120,1,104,136,44,217,152,121,10,134,85,214,174,249,173,28,85,181,101,148,124,204,230,63,119,99,31,52,172,18,99,202,173,216,91,117,135,170,137,116,115,117,66,238,69,190,26,61,74,185,53,149,188,46,212,130,140,17,73,225,45,181,154,65,10,161,97,167,122,87,4,13,106,244,29,152,18,185,59,96,145,86,67,187,61,70,233,191,20,159,250,65,10,232,10,246,173,138,127,235,153,12,8,154,253,75,219,255,213,140,55,39,92,152,171,36,145,118,151,183,50,242,190,240,193,24,10,51,5,211,55,233,198,143,119,18,59,86,201,225,148,240,47,170,87,197,2,16,86,73,193,226,30,137,49,85,68,125,101,205,37]}},"58ce0b65ba2fb1d834ad64cdd5af3d3e":{"Signature":{"id":"58ce0b65ba2fb1d834ad64cdd5af3d3e","disclosed_messages":{"1":"35e4bd4303a80f1ce65daacadcc6d47e8041b60f3ea810aae2dcbaca23d11a8b"},"pok":{"sigma_1":"a56830bf0c29accd0baa29f5a57af3457f0c15df2555914f85cee1a5299e9b801bdceabdd1daee5b47cc720c0a4f9460","sigma_2":"87261a57015e0c816bed39dc4a1cd2acadc4b04de2057c76e5062a7ddb14a3782781ab63b86d278399d956239f7a34c2","commitment":"8dfbad164435cea85f8411599180a0caff552625628c6b405f514756aa2f8daf8ae12691a008add789467493b0ae1de1088df2cc5fa9688d3f7fb505406882ab3eaa902bd4aa0675591c2445a7f3095c863e379a187f10495a249dd48834a93c","proof":["07fe6aa957cd703e73a4df583a4f38ff023c6e1cd65585a992e8f68a296b0cfc","3da5854dd4b3950dda92788258ec82b9b7df09a4d7e250f98ec16710ec3abdb6","6a21db1ed30a999ca55044170b058e6e9412b5b95f20a4b0017a152c3c9e3d2a","552ec247d24abe35bbefd76986daa2c54819fa245122aab3710c33f072085b31","15c965f253311da2aa7f62129daff9db0a84c728a41354310b7ad05e0d26fee4"]}}},"83ed347e315378a559eec245378cd4fb":{"Revocation":{"id":"83ed347e315378a559eec245378cd4fb","proof":{"e_c":"ae993ca87d29e501b8079b7855d3fc4835775b3c8a0dc57c03632a51b3269e58ea06d1f3ac9d3aa0ed548c98f45ffd2e","t_sigma":"98160b5d9db0f271a617da78af09f9e0b48aa1704e6e3cedfb3983630ef351f4dafa840704e4e192d42f0c706cf19f52","t_rho":"a06539076ba842e4c1366a27dd7f20e8d40208d8d45855a1bc1071c12c2d66bf57b98a40a85b2601dec510ddd0e1d11e","s_sigma":"50918ecf24c7586a0bba3616086d964a1253e383d79a0be2426a8ad31a876958","s_rho":"47d41385db321d9deb79519db437a63a13d878ee6bbdb12603f2eb2fbf335fd9","s_delta_sigma":"0211ba787ead9fd928395d6a8c40cebf6f800175e9363a326ac885c4025187e3","s_delta_rho":"5a8b3d5ce640d1f89abac006d3285279eb80b196c5177533d27d21a22c26ade5","s_y":"6a21db1ed30a999ca55044170b058e6e9412b5b95f20a4b0017a152c3c9e3d2a"}}},"f8840bdb28fcaf8ce0c616e62d0653d4":{"Commitment":{"id":"f8840bdb28fcaf8ce0c616e62d0653d4","commitment":"91dd19d482e093db2cf0106cbf64d11524fc103f2d91da23b3332195e7f495cd55056238984fe6e818ef7b37b0f43b18","message_proof":"15c965f253311da2aa7f62129daff9db0a84c728a41354310b7ad05e0d26fee4","blinder_proof":"213e862f7dd4b1e0d711007ef58535e70efdaf7354fdbf3294b0bfeae889c89d"}},"8ddb8c99f2ece48665df213e60b5f5d4":{"VerifiableEncryption":{"id":"8ddb8c99f2ece48665df213e60b5f5d4","c1":"9507ad905f156d91153aaf0987d2a5a44b7d81b9e35b42bf00a393742adfcfb0b33bd10fad3120437d5013420452ce81","c2":"8ffc380e2afd2853b62d7e0170c4bac375df315d8793850445d0039e599d3bcb846aa2aec12c342da0c81b8c4536fd27","message_proof":"6a21db1ed30a999ca55044170b058e6e9412b5b95f20a4b0017a152c3c9e3d2a","blinder_proof":"5e8a57b64b1d207f4d4353c2493cfa29b39a55ca40ade02583af2dbb6fac80d3"}},"5d0b0d626bb34d4a069c164b4c6d1d6c":{"Membership":{"id":"5d0b0d626bb34d4a069c164b4c6d1d6c","proof":{"e_c":"a1924339da330c45f1d7566ca31dafadba33a7e55ff3b233a3d59c223515c0010fe8ad02c1bdeb6dbd9cae540fce75cb","t_sigma":"b92b94f55d05be0376599e1acbeff823490175a27d8f913b0761bbe2e38ca7e77876e5e8de610b9d3abc3910044bf418","t_rho":"b0bd5b521201b08afb46a10f624aa6ccde3467e8c1b6f4977f827adb3ef3601ea715a6065a75a78f62da217b4fde41a2","s_sigma":"0a2d7bd5bedf1d715774880397cff33bdd4a4cc9dbb28d1f83e12233582f799b","s_rho":"1768a30a124710850c3c019780688413066053dcb0c466933947fcd5a0777fc3","s_delta_sigma":"4724bd780cde817b56d29b24bb55660bdea3b6aca209d49900f156c7a2ba8d4f","s_delta_rho":"06d1a88b009685b3824732c6a22b548298a01623fb15419b8f18d8a4d77f0041","s_y":"552ec247d24abe35bbefd76986daa2c54819fa245122aab3710c33f072085b31"}}}},"challenge":"17bcfa8e6c389247a93e7113b24cd7ed6ede95e1fa2ef541bcc7500edeea2ae6","disclosed_messages":[["58ce0b65ba2fb1d834ad64cdd5af3d3e",[["name",{"Hashed":{"value":"John Doe","print_friendly":true}}]]]]}
