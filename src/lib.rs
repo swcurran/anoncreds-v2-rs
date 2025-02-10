@@ -1,11 +1,4 @@
-//!
-#![warn(missing_docs)]
-#![deny(
-    trivial_casts,
-    trivial_numeric_casts,
-    unused_import_braces,
-    unused_qualifications
-)]
+//! A map implementation
 
 use rand_core::{CryptoRng, RngCore};
 
@@ -54,10 +47,17 @@ pub mod prelude {
     pub use credential::*;
     pub use error::*;
     pub use issuer::*;
-    pub use knox::{accumulator::vb20, ps, Knox};
+    pub use knox::{accumulator::vb20, bbs, ps, Knox};
     pub use presentation::*;
     pub use revocation_registry::*;
     pub use statement::*;
 
     pub use blsful;
+}
+
+mod mapping {
+    #![allow(dead_code)]
+    #![allow(unused_assignments)]
+    pub mod map_credential;
+    pub mod map_presentation;
 }
